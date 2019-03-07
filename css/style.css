@@ -7,7 +7,9 @@ header,
 .view {
   height: 100%;
   scroll-behavior: smooth;
+    
 }
+
 
 @media (max-width: 740px) {
   html,
@@ -38,4 +40,8 @@ header,
 
 .vision-box {
   background-color: white;
+}
+
+.timeflies{
+    font-size: 17px;
 }
