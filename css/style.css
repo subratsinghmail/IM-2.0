@@ -45,3 +45,38 @@ header,
 .timeflies{
     font-size: 17px;
 }
+
+
+.carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 300px;
+    }
+    .carousel-inner {
+      height: 300px;
+    }
+
+    @media(max-width: 500px;){
+      .carousel,
+    .carousel-item,
+    .carousel-item.active {
+      height: 200px;
+    }
+    .carousel-inner {
+      height: 200px;
+    }
+
+    }
+
+    .carousel-control-color{
+      background-color: #1b5e20 !important;
+    }
+
+.mb-6,
+.my-6 {
+  margin-bottom: 4rem !important
+}
+.mb-7,
+.my-7 {
+  margin-bottom: 5rem !important
+}
