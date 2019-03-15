@@ -18,7 +18,10 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-gr-c-s-loaded="true" aria-busy="true" onload="hidePreloader();">
+    <div id="mdb-preloader" class="flex-center" style="background-color: #e1eae1;">
+        <img class="preloader_screen" src="img/agriculture.gif">
+    </div>
 
     <!-- Main navigation -->
     <header>
@@ -296,8 +299,7 @@
                                 </div>
                             </div>
                             <!-- / Collapsible element -->
-                            <button class="btn btn-outline-green btn-md" type="button" data-toggle="collapse" data-target="#threshing-machine-info" aria-expanded="false" aria-controls="collapseExample">
-                                Read More
+                            <button class="btn btn-outline-green btn-md btn-rounded" type="button" data-toggle="collapse" data-target="#threshing-machine-info" aria-expanded="false" aria-controls="collapseExample" onclick="readMoreOne()"><div id="readMoreOne">Read More</div>
                             </button>
 
                         </div>
@@ -375,8 +377,8 @@
                                 </div>
                             </div>
                             <!-- / Collapsible element -->
-                            <button class="btn btn-outline-green btn-md" type="button" data-toggle="collapse" data-target="#indigenous-separator-info" aria-expanded="false" aria-controls="collapseExample">
-                                Read More
+                            <button class="btn btn-outline-green btn-md btn-rounded" type="button" data-toggle="collapse" data-target="#indigenous-separator-info" aria-expanded="false" aria-controls="collapseExample" onclick="readMoreTwo()">
+                            <div id="readMoreTwo">Read More</div>
                             </button>
 
                         </div>
@@ -454,8 +456,8 @@
                                 </div>
                             </div>
                             <!-- / Collapsible element -->
-                            <button class="btn btn-outline-green btn-md" type="button" data-toggle="collapse" data-target="#indigenous-hopper-info" aria-expanded="false" aria-controls="collapseExample">
-                                Read More
+                            <button class="btn btn-outline-green btn-md btn-rounded" type="button" data-toggle="collapse" data-target="#indigenous-hopper-info" aria-expanded="false" aria-controls="collapseExample" onclick="readMoreThree()">
+                            <div id="readMoreThree">Read More</div>
                             </button>
                         </div>
                         <!--Grid column-->
@@ -728,6 +730,17 @@
     <script type="text/javascript" src="js/mdb.js"></script>
 
     <script>
+
+        //Preloader
+        function hidePreloader(){
+        document.getElementById("mdb-preloader").style.visibility="hidden";
+        };
+
+        /* Navigation Bar Close*/
+        $('.navbar-collapse a').click(function(){
+        $('.navbar-collapse').collapse('hide');
+        });
+
         new WOW().init();
 
         //Turning Of Carousel Transition
@@ -736,6 +749,37 @@
             interval: false
         })
         //Script For Contact Us Form
+               
+
+        //Script For Contact Us Form
+
+        //Script For Button Text Toggle
+        function readMoreOne() {
+        var x = document.getElementById("readMoreOne");
+        if (x.innerHTML === "Read More") {
+            x.innerHTML = "Close";
+        } else {
+            x.innerHTML = "Read More";
+            }
+        }
+
+        function readMoreTwo() {
+        var x = document.getElementById("readMoreTwo");
+        if (x.innerHTML === "Read More") {
+            x.innerHTML = "Close";
+        } else {
+            x.innerHTML = "Read More";
+            }
+        }
+
+        function readMoreThree() {
+        var x = document.getElementById("readMoreThree");
+        if (x.innerHTML === "Read More") {
+            x.innerHTML = "Close";
+        } else {
+            x.innerHTML = "Read More";
+            }
+        }
 
     </script>
 
