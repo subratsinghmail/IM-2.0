@@ -18,6 +18,16 @@ header,
   .view {
     height: 100vh;
   }
+
+  .image_hover:hover {
+      border: 0px solid yellow !important;
+      box-shadow:  0px 0px 25px 0px green !important;
+      transform: scale(1.1, 1.1) !important;
+      z-index: 1 !important;
+      position: relative !important;
+
+}
+
 }
 
 .top-nav-collapse {
@@ -36,6 +46,11 @@ header,
   .vision-box {
     font-size: 10px;
   }
+
+
+.image_hover {
+      property: initial;
+}
 }
 
 .vision-box {
@@ -115,4 +130,14 @@ header,
       .md-form input[type=search]:focus:not([readonly]) + label,
       .md-form textarea.md-textarea:focus:not([readonly]) + label {
         color: #4caf50 !important }
+
+.image_hover:hover {
+      transition-delay: 0.8s;
+      border: 1px solid yellow;
+      box-shadow:  0px 0px 100px 0px green;
+      transform: scale(2, 2);
+      z-index: 1;
+      position: relative;
+
+}
 
