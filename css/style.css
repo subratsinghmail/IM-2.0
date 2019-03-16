@@ -1,120 +1,137 @@
-
-
 /* Required for full background image */
+
 html,
 body,
 header,
 .view {
-  height: 100%;
-  scroll-behavior: smooth;
-    
+    height: 100%;
+    scroll-behavior: smooth;
 }
 
-
-
-
 @media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .view {
-    height: 100vh;
-  }
+    html,
+    body,
+    header,
+    .view {
+        height: 100vh;
+    }
+    .image_hover:hover {
+        border: 0px solid yellow !important;
+        box-shadow: 0px 0px 25px 0px green !important;
+        transform: scale(1.1, 1.1) !important;
+        z-index: 1 !important;
+        position: relative !important;
+    }
 }
 
 .top-nav-collapse {
-  background-color: #1b5e20 !important;
+    background-color: #1b5e20 !important;
 }
 
 .navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+    background: transparent !important;
 }
 
 @media (max-width: 991px) {
-  .navbar:not(.top-nav-collapse) {
-    background: #1b5e20 !important;
-  }
-
-  .vision-box {
-    font-size: 10px;
-  }
+    .navbar:not(.top-nav-collapse) {
+        background: #1b5e20 !important;
+    }
+    .vision-box {
+        font-size: 10px;
+    }
+    .image_hover {
+        property: initial;
+    }
 }
 
 .vision-box {
-  background-color: white;
+    background-color: white;
 }
 
-.timeflies{
+.timeflies {
     font-size: 17px;
 }
 
-
 .carousel,
+.carousel-item,
+.carousel-item.active {
+    height: 300px;
+}
+
+.carousel-inner {
+    height: 300px;
+}
+
+@media(max-width: 500px) {
+    .carousel,
     .carousel-item,
     .carousel-item.active {
-      height: 300px;
+        height: 200px;
     }
     .carousel-inner {
-      height: 300px;
+        height: 200px;
     }
+}
 
-    @media(max-width: 500px;){
-      .carousel,
-    .carousel-item,
-    .carousel-item.active {
-      height: 200px;
-    }
-    .carousel-inner {
-      height: 200px;
-    }
+.carousel-control-color,
+.button-dark-green {
+    background-color: #1b5e20 !important;
+}
 
-    }
-
-    .carousel-control-color,
-    .button-dark-green{
-      background-color: #1b5e20 !important;
-    }
-
-    .text-green-color
-    {
-      color:  #1b5e20 !important;
-    }
+.text-green-color {
+    color: #1b5e20 !important;
+}
 
 .mb-6,
 .my-6 {
-  margin-bottom: 4rem !important
+    margin-bottom: 4rem !important
 }
+
 .mb-7,
 .my-7 {
-  margin-bottom: 5rem !important
+    margin-bottom: 5rem !important
 }
-/*Changing label color when data is being entered in form component*/
- .md-form input[type=text]:focus:not([readonly]),
-    .md-form input[type=password]:focus:not([readonly]),
-    .md-form input[type=email]:focus:not([readonly]),
-    .md-form input[type=url]:focus:not([readonly]),
-    .md-form input[type=time]:focus:not([readonly]),
-    .md-form input[type=date]:focus:not([readonly]),
-    .md-form input[type=datetime-local]:focus:not([readonly]),
-    .md-form input[type=tel]:focus:not([readonly]),
-    .md-form input[type=number]:focus:not([readonly]),
-    .md-form input[type=search-md]:focus:not([readonly]),
-    .md-form input[type=search]:focus:not([readonly]),
-    .md-form textarea.md-textarea:focus:not([readonly]) {
-      -webkit-box-shadow: 0 1px 0 0 #4caf50 !important;
-      box-shadow: 0 1px 0 0 #4caf50 !important;
-      border-bottom: 1px solid #4caf50 !important; }
- .md-form input[type=text]:focus:not([readonly]) + label,
-      .md-form input[type=password]:focus:not([readonly]) + label,
-      .md-form input[type=email]:focus:not([readonly]) + label,
-      .md-form input[type=url]:focus:not([readonly]) + label,
-      .md-form input[type=time]:focus:not([readonly]) + label,
-      .md-form input[type=date]:focus:not([readonly]) + label,
-      .md-form input[type=datetime-local]:focus:not([readonly]) + label,
-      .md-form input[type=tel]:focus:not([readonly]) + label,
-      .md-form input[type=number]:focus:not([readonly]) + label,
-      .md-form input[type=search-md]:focus:not([readonly]) + label,
-      .md-form input[type=search]:focus:not([readonly]) + label,
-      .md-form textarea.md-textarea:focus:not([readonly]) + label {
-        color: #4caf50 !important }
 
+
+/*Changing label color when data is being entered in form component*/
+
+.md-form input[type=text]:focus:not([readonly]),
+.md-form input[type=password]:focus:not([readonly]),
+.md-form input[type=email]:focus:not([readonly]),
+.md-form input[type=url]:focus:not([readonly]),
+.md-form input[type=time]:focus:not([readonly]),
+.md-form input[type=date]:focus:not([readonly]),
+.md-form input[type=datetime-local]:focus:not([readonly]),
+.md-form input[type=tel]:focus:not([readonly]),
+.md-form input[type=number]:focus:not([readonly]),
+.md-form input[type=search-md]:focus:not([readonly]),
+.md-form input[type=search]:focus:not([readonly]),
+.md-form textarea.md-textarea:focus:not([readonly]) {
+    -webkit-box-shadow: 0 1px 0 0 #4caf50 !important;
+    box-shadow: 0 1px 0 0 #4caf50 !important;
+    border-bottom: 1px solid #4caf50 !important;
+}
+
+.md-form input[type=text]:focus:not([readonly])+label,
+.md-form input[type=password]:focus:not([readonly])+label,
+.md-form input[type=email]:focus:not([readonly])+label,
+.md-form input[type=url]:focus:not([readonly])+label,
+.md-form input[type=time]:focus:not([readonly])+label,
+.md-form input[type=date]:focus:not([readonly])+label,
+.md-form input[type=datetime-local]:focus:not([readonly])+label,
+.md-form input[type=tel]:focus:not([readonly])+label,
+.md-form input[type=number]:focus:not([readonly])+label,
+.md-form input[type=search-md]:focus:not([readonly])+label,
+.md-form input[type=search]:focus:not([readonly])+label,
+.md-form textarea.md-textarea:focus:not([readonly])+label {
+    color: #4caf50 !important
+}
+
+.image_hover:hover {
+    transition-delay: 0.8s;
+    border: 1px solid yellow;
+    box-shadow: 0px 0px 100px 0px green;
+    transform: scale(2, 2);
+    z-index: 1;
+    position: relative;
+}
