@@ -18,10 +18,11 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-gr-c-s-loaded="true" aria-busy="true" onload="hidePreloader();">
+<body id="style-1" data-gr-c-s-loaded="true" aria-busy="true" onload="hidePreloader();">
     <div id="mdb-preloader" class="flex-center" style="background-color: #e1eae1;">
         <img class="preloader_screen" src="img/agriculture.gif">
     </div>
+        <div class="force-overflow"></div>
 
     <!-- Main navigation -->
     <header>
@@ -87,7 +88,7 @@
         <!-- Navbar -->
         <!-- Full Page Intro -->
         <div class="view">
-            <video class="video-intro " poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>
+            <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg"  playsinline autoplay muted loop>
                 <source src="video/intro.mp4" type="video/mp4">
             </video>
             <!-- Mask & flexbox options-->
@@ -188,26 +189,14 @@
                                     <div class="step-content mr-xl-3 p-4 hoverable vision-box wow fadeInRight">
                                         <p class="mb-0 font-weight-bold display-5" style="font-size: 16px;">It is important to create technologies and equipments which make farming easier and less of herculean task for the farmers.
                                             <br><br> We at <b class="green-text "> Innovative Machineries</b> are constantly aiming to make equipments and machineries which meet the requirements for the farmers of the India.
-
-
-
-
-
-
                                         </p>
                                     </div>
                                 </li>
                             </ul>
-                            <!-- Timeline Wrapper -->
                         </div>
                     </div>
                 </div>
-                <!-- Timeline -->
-
             </div>
-            </div>
-            </div>
-
         </section>
 
         <hr class="my-5 w-75">
@@ -611,8 +600,6 @@
                 </div>
 
             </div>
-
-
         </section>
 
         <!--Gallery Section-->
@@ -780,7 +767,6 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- SCRIPTS -->
     <!-- JQuery -->
@@ -791,6 +777,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/custom.js"></script>
     <script>
 
         //Preloader
@@ -805,46 +793,7 @@
 
         new WOW().init();
 
-        //Turning Of Carousel Transition
-        $('.carousel').carousel({
-
-            interval: false
-        })
-        //Script For Contact Us Form
-               
-
-        //Script For Contact Us Form
-
-        //Script For Button Text Toggle
-        function readMoreOne() {
-        var x = document.getElementById("readMoreOne");
-        if (x.innerHTML === "Read More") {
-            x.innerHTML = "Close";
-        } else {
-            x.innerHTML = "Read More";
-            }
-        }
-
-        function readMoreTwo() {
-        var x = document.getElementById("readMoreTwo");
-        if (x.innerHTML === "Read More") {
-            x.innerHTML = "Close";
-        } else {
-            x.innerHTML = "Read More";
-            }
-        }
-
-        function readMoreThree() {
-        var x = document.getElementById("readMoreThree");
-        if (x.innerHTML === "Read More") {
-            x.innerHTML = "Close";
-        } else {
-            x.innerHTML = "Read More";
-            }
-        }
-
     </script>
-
 </body>
 
 </html>
