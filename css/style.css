@@ -154,6 +154,7 @@ body {
     transform: scale(2, 2);
     z-index: 1;
     position: relative;
+    transition-duration: 1.5s;
 }
 
 /*For Map*/
