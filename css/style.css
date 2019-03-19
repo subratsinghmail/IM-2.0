@@ -8,6 +8,25 @@ header,
     scroll-behavior: smooth;
 }
 
+/* Side Scroll Bar*/
+
+body {
+    background-blend-mode: #F5F5F5;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+#style-1::-webkit-scrollbar {
+    width: 8px;
+    background-color: #1b5e20;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+    background-color: #ffeb3b;
+
+}
+
 @media (max-width: 740px) {
     html,
     body,
@@ -15,6 +34,7 @@ header,
     .view {
         height: 100vh;
     }
+
     .image_hover:hover {
         border: 0px solid yellow !important;
         box-shadow: 0px 0px 25px 0px green !important;
@@ -124,16 +144,7 @@ header,
 .md-form input[type=search-md]:focus:not([readonly])+label,
 .md-form input[type=search]:focus:not([readonly])+label,
 .md-form textarea.md-textarea:focus:not([readonly])+label {
-    color: #4caf50 !important
-}
-
-.image_hover:hover {
-    transition-delay: 0.8s;
-    border: 1px solid yellow;
-    box-shadow: 0px 0px 100px 0px green;
-    transform: scale(2, 2);
-    z-index: 1;
-    position: relative;
+    color: #4caf50 !important;
 }
 
 

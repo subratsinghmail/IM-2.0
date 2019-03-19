@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+.frame {
+
+}
+
+.circle {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	transition: 0.5s;
+	z-index: 2;
+}
+
+.circle:nth-child(1) {
+	background: url("../1.jpg") !important;
+	background-attachment: fixed;
+	clip-path: circle(10% at 0 0);
+}
+
+.circle:nth-child(1):hover {
+	clip-path: circle(100% at 0 0);
+}
