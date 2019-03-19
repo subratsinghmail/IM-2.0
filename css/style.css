@@ -72,23 +72,23 @@ body {
     font-size: 17px;
 }
 
-.carousel,
-.carousel-item,
-.carousel-item.active {
+.product-carousel,
+.product-carousel-item,
+.product-carousel-item.active {
     height: 300px;
 }
 
-.carousel-inner {
+.product-carousel-inner {
     height: 300px;
 }
 
 @media(max-width: 500px) {
-    .carousel,
-    .carousel-item,
-    .carousel-item.active {
+    .product-carousel,
+    .product-carousel-item,
+    .product-carousel-item.active {
         height: 200px;
     }
-    .carousel-inner {
+    .product-carousel-inner {
         height: 200px;
     }
 }
@@ -157,17 +157,20 @@ body {
     transition-duration: 1.5s;
 }
 
+
 /*For Map*/
-.map-container-6{
-overflow:hidden;
-padding-bottom:56.25%;
-position:relative;
-height:0;
+
+.map-container-6 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
-.map-container-6 iframe{
-left:0;
-top:0;
-height:100%;
-width:100%;
-position:absolute;
+
+.map-container-6 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
