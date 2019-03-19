@@ -699,31 +699,33 @@
                                         <h3 class="mt-2 wow shake slower "><i class="fas fa-envelope yellow-text"></i> Write to us:</h3>
                                     </div>
                                     <!-- Body -->
-                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST" onsubmit="return validateForm()">
                                         <div class="md-form wow fadeInUp" id="contact-form">
                                             <i class="fas fa-user prefix grey-text"></i>
-                                            <input type="text" id="name" name="name" class="form-control" required>
-                                            <label for="form-name">Your name</label>
+                                            <input type="text" id="name" name="name" class="form-control">
+                                            <label for="name">Your name</label>
                                         </div>
                                         <div class="md-form wow fadeInUp">
                                             <i class="fas fa-envelope prefix grey-text"></i>
-                                            <input type="text" id="email" name="email" class="form-control" required>
-                                            <label for="form-email">Your email</label>
+                                            <input type="text" id="email" name="email" class="form-control">
+                                            <label for="email">Your email</label>
                                         </div>
                                         <div class="md-form wow fadeInUp">
                                             <i class="fas fa-tag prefix grey-text"></i>
-                                            <input type="text" id="subject" name="subject" class="form-control">
-                                            <label for="form-Subject">Subject</label>
+                                            <input type="text" id="subject" name="subject" class="form-control" required>
+                                            <label for="Subject">Subject</label>
                                         </div>
                                         <div class="md-form wow fadeInUp">
                                             <i class="fas fa-pencil-alt prefix grey-text"></i>
-                                            <textarea id="message" name="message" class="form-control md-textarea" rows="3" required></textarea>
-                                            <label for="form-text">Write a message</label>
+                                            <textarea id="message" name="message" class="md-textarea" required></textarea>
+                                            <label for="message">Write a message</label>
                                         </div>
                                         <div class="text-center wow fadeInUp">
-                                            <button class="btn button-dark-green" onclick="validateForm()">Submit</button>
+                                            <a class="btn button-dark-green text-white" id="button_status" onclick="validateForm()">Send</a>
                                         </div>
-                                    </form>
+                                        <div class="status text-center red-text"><h6 id="status"></h5></div>
+
+                                    </form>        
                                 </div>
                             </div>
                             <!-- Form with header -->
@@ -770,7 +772,6 @@
                 </div>
             </div>
         </section>
-
         <!-- ContactUs Section Ends Here-->
     </main>
     <!-- SCRIPTS -->
@@ -798,7 +799,72 @@
 
         new WOW().init();
 
-        </script>
+        // Form 
 
+        function validateForm() {
+        var x =  document.getElementById('name').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Name cannot be empty";
+            return false;
+        }
+        x =  document.getElementById('email').value;
+        if (x == "") {
+             document.getElementById('status').innerHTML = "Email cannot be empty";
+            return false;
+        } else {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!re.test(x)){
+                document.getElementById('status').innerHTML = "Email format invalid";
+                return false;
+            }
+        }
+        x =  document.getElementById('subject').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Subject cannot be empty";
+            return false;
+        }
+        x =  document.getElementById('message').value;
+        if (x == "") {
+            document.getElementById('status').innerHTML = "Message cannot be empty";
+            return false;
+        }
+        //get input field values data to be sent to server
+        document.getElementById('button_status').innerHTML = "Sending...";
+        formData = {
+            'name'     : $('input[name=name]').val(),
+            'email'    : $('input[name=email]').val(),
+            'subject'  : $('input[name=subject]').val(),
+            'message'  : $('textarea[name=message]').val()
+        };
+
+
+        $.ajax({
+        url : "mail.php",
+        type: "POST",
+        data : formData,
+        success: function(data, textStatus, jqXHR)
+        {
+
+        $('#button_status').text(data.message);
+        document.getElementById('status').innerHTML = "Thank You...We will reach you shortly";
+        document.getElementById('status').style.color = "green";
+
+        var myVar = setTimeout(myTimer, 5000);
+
+        if (data.code) //If mail was sent successfully, reset the form.
+        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+        },
+        error: function (jqXHR, textStatus, errorThrown)
+        {
+        $('#status').text(jqXHR);
+        }  
+    });
+}
+        function myTimer() {
+        if(document.getElementById("button_status").innerHTML == "Email successfully sent!") {
+        document.getElementById("button_status").innerHTML = "Send";
+        }}
+   // Form Closed
+</script>
 </body>
 </html>
