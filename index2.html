@@ -26,7 +26,7 @@
     <!-- Main navigation -->
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar animated fadeIn delay-1s">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar animated fadeIn delay-2s">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">I Machineries</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Demo02" aria-controls="Demo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
                         <!--Grid column-->
                         <div class="col-md-12 mb-4 white-text text-center">
 
-                            <h3 class="subtext-header h3-responsive animated pulse slower  mt-2 mb-4 green-text">"Augmenting Farmers Income Through Innovation and Technology"</h3>
+                            <h3 class="subtext-header h3-responsive animated pulse slower mt-2 mb-4 green-text">"Augmenting Farmers Income Through Innovation and Technology"</h3>
 
                             <hr class="w-75 hr-light" style="color: darkgreen;">
                             <a href="#!" class="btn btn-rounded btn-outline-yellow animated pulse slower infinite ">
@@ -774,7 +774,7 @@
                                     frameborder="0 " style="border:0 " allowfullscreen></iframe>
                             </div>
                             <!-- Buttons-->
-                            <div class="row text-center wow fadeInUp " data-wow-delay="1.2s ">
+                            <div class="row text-center wow fadeIn " data-wow-delay="1.2s ">
                                 <div class="col-md-4 ">
                                     <a class="btn-floating button-dark-green accent-1 ">
                                         <i class="fas fa-map-marker-alt yellow-text "></i>
@@ -786,7 +786,7 @@
                                     <a class="btn-floating button-dark-green accent-1 ">
                                         <i class="fas fa-phone yellow-text "></i>
                                     </a>
-                                    <p>+91-9650465241 <br> +91-
+                                    <p>+91-9650465241 <br> +91-8851174577
                                     </p>
                                     <p class="mb-md-0 ">Mon - Fri, 8:00-22:00</p>
                                 </div>
@@ -820,6 +820,11 @@
     <script type="text/javascript " src="js/mdb.js "></script>
 <!-- Custom JavaScript -->
     <script type="text/javascript " src="js/custom.js "></script>
+    
+    <script> 
+    
+    new WOW().init();
+    </script>
 
     <script>
         //Preloader
@@ -832,7 +837,7 @@
             $('.navbar-collapse').collapse('hide');
         });
 
-        new WOW().init();
+        
 
         //Turning Off Product Carousel Transition
         $('.product-carousel').carousel({
@@ -870,7 +875,7 @@
             } else {
                 x.innerHTML = "Read More ";
             }
-        }
+        }  //script for read more button toggle ends
 
         //script for gallery section
         $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function() {
