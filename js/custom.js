@@ -1,9 +1,3 @@
-        //Turning Of Carousel Transition
-        $('.carousel').carousel({
-
-            interval: false
-        })
-
         //Turning Off Product Carousel Transition
         $('.product-carousel').carousel({
 
