@@ -564,7 +564,7 @@
                         </div>
                         <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
                             <div class=" d-flex align-content-center justify-content-center mt-5">
-                                <img src="img/team/sri.jpeg" class="rounded-circle img-fluid z-depth-4" style="width: 65%; height: 65%;">
+                                <img src="img/team/alias.JPG" class="rounded-circle img-fluid z-depth-4" style="width: 65%; height: 65%;">
 
                             </div>
                             <h4 class="h4-responsive  text-center font-weight-bold mt-4 mb-4">Subrat Kumar Singh</h4>
@@ -633,7 +633,7 @@
             <hr class="hr-dark w-25 mb-5 wow fadeIn">
             <div class="container-fluid mt-5">
                 <div class="container">
-                    <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2 gallery-carousel" data-ride="carousel">
+                    <div id="carousel-example-multi" class="carousel slide  carousel-multi-item v-2 gallery-carousel" data-ride="carousel">
 
                         <!--Controls-->
                         <div class="controls-top wow fadeInDown" data-wow-delay="0.25s">
@@ -914,9 +914,10 @@
                             <div id="map-container-section " class="z-depth-1-half map-container-6 " style="height: 400px ">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.3616443579012!2d77.48650791491946!3d28.468653582482666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea0bb627ba3f%3A0x98ceba75b8e54979!2sITS+Engineering+College+%2C+Greater+Noida!5e0!3m2!1sen!2sin!4v1552677669999 " frameborder="0 " style="border:0 " allowfullscreen></iframe>
                             </div>
-                            <!-- Buttons-->
-                            <div class="row text-center wow fadeIn " data-wow-delay="1.2s ">
-                                    <div class="col-md-4 ">
+                            <!-- Button-->
+                                <div class="row text-center wow fadeInUp " data-wow-delay="1.5s">
+                    
+                                    <div class="col-md-4 wow fadeInUp ">
                                         <a class="btn-floating button-dark-green accent-1 ">
                                             <i class="fas fa-map-marker-alt yellow-text "></i>
                                         </a>
@@ -982,6 +983,7 @@
 
         // Form  to check for valid contents
 
+
         function validateForm() {
         var x =  document.getElementById('name').value;
         if (x == "") {
@@ -1017,7 +1019,6 @@
             'subject'  : $('input[name=subject]').val(),
             'message'  : $('textarea[name=message]').val()
         };
-
         $.ajax({
         url : "mail.php",
         type: "POST",
